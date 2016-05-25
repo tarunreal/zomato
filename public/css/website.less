@@ -798,79 +798,78 @@ input[type=number]::-webkit-outter-spin-button {
             }
           }
         }
-        .eventDetailConatiner{
-
-        .detailContainer {
-          position: relative;
-          float: left;
-          height: auto;
-          padding-left: 2rem;
-          box-sizing: border-box;
-          width: 63rem;
-          .placeholder {
-            position: relative;
-            height: 3rem;
-            line-height: 3rem;
-            width: 100%;
-            box-sizing: border-box;
-            border: none;
-            font-size: 1.6rem;
-            border-bottom: 0.1rem solid #e4e4e4;
-            color: gray;
-            background: transparent;
-            font-weight: 100;
-            margin-top: 4rem;
-          }
-          .placeholder::-webkit-input-placeholder {
-            color: #C3C3C3;
-            font-size: 1.6rem;
-            font-weight: 100;
-          }
-        }
-        .selectPersonContainer {
-          position: relative;
-          float: left;
-          width: 63rem;
-          padding-top: 1rem;
-          padding-left: 2rem;
-          box-sizing: border-box;
-          .text {
-            position: relative;
-            width: 100%;
-            height: 5rem;
-            line-height: 5rem;
-            font-size: 1.6rem;
-            color: #645c5c;
-          }
-          .personBarContainer {
+        .eventDetailConatiner {
+          .detailContainer {
             position: relative;
             float: left;
-            height: 8rem;
-            width: 100%;
+            height: auto;
+            padding-left: 2rem;
             box-sizing: border-box;
-            .numberBlock {
+            width: 63rem;
+            .placeholder {
               position: relative;
-              float: left;
+              height: 3rem;
+              line-height: 3rem;
+              width: 100%;
+              box-sizing: border-box;
+              border: none;
+              font-size: 1.6rem;
+              border-bottom: 0.1rem solid #e4e4e4;
+              color: gray;
+              background: transparent;
+              font-weight: 100;
+              margin-top: 4rem;
+            }
+            .placeholder::-webkit-input-placeholder {
+              color: #C3C3C3;
+              font-size: 1.6rem;
+              font-weight: 100;
+            }
+          }
+          .selectPersonContainer {
+            position: relative;
+            float: left;
+            width: 63rem;
+            padding-top: 1rem;
+            padding-left: 2rem;
+            box-sizing: border-box;
+            .text {
+              position: relative;
+              width: 100%;
               height: 5rem;
               line-height: 5rem;
-              background: #E6E6E6;
-              width: 25%;
-              font-size: 2rem;
-              text-align: center;
+              font-size: 1.6rem;
               color: #645c5c;
-              box-shadow: 0.2rem 0.2rem 0.15rem 0 rgba(0,0,0,0.2);
-              cursor: pointer;
-              -webkit-transition: all 0.3s ease;
-              &.selectedNumber {
-                background: #dfa240;
-                color: white;
+            }
+            .personBarContainer {
+              position: relative;
+              float: left;
+              height: 8rem;
+              width: 100%;
+              box-sizing: border-box;
+              .numberBlock {
+                position: relative;
+                float: left;
                 height: 5rem;
                 line-height: 5rem;
-                box-shadow: 0.1rem 0.15rem 1rem 0 rgba(0,0,0,0.3);
+                background: #E6E6E6;
+                width: 25%;
+                font-size: 2rem;
+                text-align: center;
+                color: #645c5c;
+                box-shadow: 0.2rem 0.2rem 0.15rem 0 rgba(0,0,0,0.2);
+                cursor: pointer;
+                -webkit-transition: all 0.3s ease;
+                &.selectedNumber {
+                  background: #dfa240;
+                  color: white;
+                  height: 5rem;
+                  line-height: 5rem;
+                  box-shadow: 0.1rem 0.15rem 1rem 0 rgba(0,0,0,0.3);
+                }
               }
             }
           }
-        }
         }
         .btnConfirm {
           position: absolute;
@@ -1259,35 +1258,149 @@ input[type=number]::-webkit-outter-spin-button {
     background: black;
   }
   .footerEnd {
-    height: auto;
-    line-height: 8rem;
+    position: fixed;
+    bottom: 0;
+    height: 7rem;
+    line-height: 7rem;
     width: 100%;
-    position: relative;
-    float: left;
-    background-color: #000;
-    .leftContent {
-      text-align: left;
-      color: #B3AEAE;
-      font-size: 1.6rem;
-      padding-left: 0;
+    background: rgba(0,0,0,0.8);
+    .leftPart {
+      position: relative;
+      float: left;
+      width: 55rem;
+      height: 100%;
+      .logoBlock {
+        position: relative;
+        float: left;
+        width: 20rem;
+        text-align: center;
+        height: 4rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-sizing: border-box;
+        border-right: 1px solid rgba(255,255,255,.5);
+        .realboxLogo {
+          position: absolute;
+          height: 3rem;
+          top: 50%;
+          right: 3rem;
+          transform: translateY(-50%);
+        }
+      }
+      .footerText {
+        position: relative;
+        float: left;
+        color: white;
+        padding-left: 3rem;
+      }
     }
-    .rightContent {
-      text-align: right;
-      color: #B3AEAE;
-      font-size: 1.6rem;
-      padding-right: 0;
+    .rightPart {
+      position: relative;
+      float: right;
+      height: 100%;
+      width: 30rem;
+      background: blue;
+      cursor: pointer;
+      .btnClaim {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 500;
+        background: #dfa240;
+      }
     }
   }
-  @media screen and (max-width: 420px) {
-    .footerEnd {
-      .leftContent {
-        font-size: 1.2rem;
-        text-align: center;
+  .signUpContainer {
+    position: absolute;
+    height: 52rem;
+    width: 45rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    background: #dfa240;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    display: none;
+    z-index: 1300;
+    -webkit-transform: translate(-50%,-50%);
+    .crossIcon {
+      position: absolute;
+      height: 2rem;
+      right: 1rem;
+      top: 1rem;
+      cursor: pointer;
+    }
+    .header {
+      position: relative;
+      float: left;
+      padding-top: 2rem;
+      height: 6rem;
+      line-height: 6rem;
+      width: 100%;
+      font-size: 2.2rem;
+      color: white;
+      font-weight: 500;
+    }
+    .signUpFormHeader {
+      position: relative;
+      float: left;
+      height: 6rem;
+      line-height: 6rem;
+      margin-top: 2rem;
+      width: 100%;
+      color: white;
+      font-weight: 500;
+      font-size: 1.5rem;
+      .formName {
+        position: relative;
+        float: left;
+        width: 9rem;
+        text-align: left;
+        text-transform: uppercase;
       }
-      .rightContent {
-        font-size: 1.2rem;
-        text-align: center;
+    }
+    .entryBlock {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 27rem;
+      background: white;
+      border-radius: 4px;
+      padding: 0 2rem;
+      box-sizing: border-box;
+      .entryPlaceholder {
+        position: relative;
+        height: 3rem;
+        line-height: 3rem;
+        width: 100%;
+        box-sizing: border-box;
+        border: none;
+        font-size: 1.6rem;
+        border-bottom: 0.1rem solid #e4e4e4;
+        color: gray;
+        background: transparent;
+        font-weight: 100;
+        margin-top: 4rem;
       }
+      .enteryPlaceholder::-webkit-input-placeholder {
+        color: #C3C3C3;
+        font-size: 1.6rem;
+        font-weight: 100;
+      }
+    }
+    .btnSignUp {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      height: 4rem;
+      line-height: 4rem;
+      width: 12rem;
+      text-align: center;
+      color: white;
+      border: 1px solid white;
     }
   }
 }

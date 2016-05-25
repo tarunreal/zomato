@@ -1251,32 +1251,148 @@ input[type=number]::-webkit-outter-spin-button {
   background: black;
 }
 .mainContainer .footerEnd {
-  height: auto;
-  line-height: 8rem;
+  position: fixed;
+  bottom: 0;
+  height: 7rem;
+  line-height: 7rem;
   width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.mainContainer .footerEnd .leftPart {
   position: relative;
   float: left;
-  background-color: #000;
+  width: 55rem;
+  height: 100%;
 }
-.mainContainer .footerEnd .leftContent {
+.mainContainer .footerEnd .leftPart .logoBlock {
+  position: relative;
+  float: left;
+  width: 20rem;
+  text-align: center;
+  height: 4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.mainContainer .footerEnd .leftPart .logoBlock .realboxLogo {
+  position: absolute;
+  height: 3rem;
+  top: 50%;
+  right: 3rem;
+  transform: translateY(-50%);
+}
+.mainContainer .footerEnd .leftPart .footerText {
+  position: relative;
+  float: left;
+  color: white;
+  padding-left: 3rem;
+}
+.mainContainer .footerEnd .rightPart {
+  position: relative;
+  float: right;
+  height: 100%;
+  width: 30rem;
+  background: blue;
+  cursor: pointer;
+}
+.mainContainer .footerEnd .rightPart .btnClaim {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  background: #dfa240;
+}
+.mainContainer .signUpContainer {
+  position: absolute;
+  height: 52rem;
+  width: 45rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: #dfa240;
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  display: none;
+  z-index: 1300;
+  -webkit-transform: translate(-50%, -50%);
+}
+.mainContainer .signUpContainer .crossIcon {
+  position: absolute;
+  height: 2rem;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+.mainContainer .signUpContainer .header {
+  position: relative;
+  float: left;
+  padding-top: 2rem;
+  height: 6rem;
+  line-height: 6rem;
+  width: 100%;
+  font-size: 2.2rem;
+  color: white;
+  font-weight: 500;
+}
+.mainContainer .signUpContainer .signUpFormHeader {
+  position: relative;
+  float: left;
+  height: 6rem;
+  line-height: 6rem;
+  margin-top: 2rem;
+  width: 100%;
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.mainContainer .signUpContainer .signUpFormHeader .formName {
+  position: relative;
+  float: left;
+  width: 9rem;
   text-align: left;
-  color: #B3AEAE;
-  font-size: 1.6rem;
-  padding-left: 0;
+  text-transform: uppercase;
 }
-.mainContainer .footerEnd .rightContent {
-  text-align: right;
-  color: #B3AEAE;
-  font-size: 1.6rem;
-  padding-right: 0;
+.mainContainer .signUpContainer .entryBlock {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 27rem;
+  background: white;
+  border-radius: 4px;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
-@media screen and (max-width: 420px) {
-  .mainContainer .footerEnd .leftContent {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  .mainContainer .footerEnd .rightContent {
-    font-size: 1.2rem;
-    text-align: center;
-  }
+.mainContainer .signUpContainer .entryBlock .entryPlaceholder {
+  position: relative;
+  height: 3rem;
+  line-height: 3rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  font-size: 1.6rem;
+  border-bottom: 0.1rem solid #e4e4e4;
+  color: gray;
+  background: transparent;
+  font-weight: 100;
+  margin-top: 4rem;
+}
+.mainContainer .signUpContainer .entryBlock .enteryPlaceholder::-webkit-input-placeholder {
+  color: #C3C3C3;
+  font-size: 1.6rem;
+  font-weight: 100;
+}
+.mainContainer .signUpContainer .btnSignUp {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  height: 4rem;
+  line-height: 4rem;
+  width: 12rem;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
 }

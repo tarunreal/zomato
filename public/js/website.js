@@ -12,6 +12,14 @@ $(document).ready(function() {
         $(this).find('.text').addClass('hide');
     })
 
+    bind('.btnClaim', function(){
+      $('.signUpContainer').css('display','block');
+      bind('.crossIcon', function(){
+        $('.signUpContainer').css('display','none');
+
+      })
+    });
+
     var pathname = window.location.pathname;
     pathname = pathname.slice(1, -1) + 'e';
     restaurant.getData({}, 'POST', pathname, function(a) {
@@ -331,7 +339,7 @@ function showConfirmationContainer() {
     $('.carousalOverlay').css('display', 'block');
     $('.mainContainer').css('overflow-y', 'hidden');
     $(".eventContainer").get(0).scrollIntoView();
-    
+
     bind('.numberBlock', function showSelectedNumber() {
       $('.numberBlock').removeClass('selectedNumber');
       $(this).addClass('selectedNumber');
