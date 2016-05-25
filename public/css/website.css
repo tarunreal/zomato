@@ -1,0 +1,1055 @@
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: 'Raleway', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outter-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.carousalOverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: none;
+}
+.widgetContainer {
+  position: fixed;
+  top: 17.5rem;
+  right: 0;
+  height: 100%;
+  z-index: 10;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.widgetContainer .widgetNew {
+  position: absolute;
+  right: 0;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  height: 4rem;
+  width: 4rem;
+  color: white;
+  cursor: pointer;
+}
+.widgetContainer .widgetNew .image {
+  position: relative;
+  float: left;
+}
+.widgetContainer .widgetNew .image img {
+  height: 2rem;
+  position: relative;
+  left: 1rem;
+  top: 1rem;
+}
+.widgetContainer .widgetNew .text {
+  position: relative;
+  float: right;
+  line-height: 4rem;
+  color: white;
+  padding-right: 0.8rem;
+}
+.widgetContainer .widgetNew.first {
+  background: #3a5795;
+  top: 4rem;
+}
+.widgetContainer .widgetNew.second {
+  background: #1da1f2;
+  top: 8.2rem;
+}
+.mainContainer {
+  position: absolute;
+  font-family: 'Raleway', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.mainContainer .loaderContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: white;
+}
+.mainContainer .loaderContainer .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25rem;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.mainContainer .welcomePage {
+  position: relative;
+  float: left;
+  height: 70rem;
+  width: 100%;
+  background-image: url("../images/back1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mainContainer .welcomePage .navbarBlock {
+  position: fixed;
+  height: 6rem;
+  line-height: 6rem;
+  width: 100%;
+  background: #000000;
+  z-index: 200;
+}
+.mainContainer .welcomePage .navbarBlock .option {
+  float: right;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  width: auto;
+  cursor: pointer;
+}
+.mainContainer .welcomePage .navbarBlock .restaurantNameBlock {
+  width: auto;
+}
+.mainContainer .welcomePage .navbarBlock .restaurantName {
+  font-size: 3rem;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 4px;
+}
+.mainContainer .welcomePage .centerTextBlock {
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
+  height: auto;
+  padding-top: 25rem;
+}
+.mainContainer .welcomePage .centerTextBlock .heading {
+  position: relative;
+  font-family: 'Dancing Script', cursive;
+  font-size: 4.2rem;
+  color: white;
+}
+.mainContainer .welcomePage .centerTextBlock .headingName {
+  font-size: 4.2rem;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 2px;
+  padding-bottom: 2rem;
+}
+.mainContainer .welcomePage .socialIconBlock {
+  position: absolute;
+  bottom: 5rem;
+  padding-left: 5rem;
+  box-sizing: border-box;
+  height: auto;
+  cursor: pointer;
+}
+.mainContainer .welcomePage .socialIconBlock .feedBlock {
+  position: relative;
+  float: left;
+  width: 4rem;
+  height: 4rem;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.mainContainer .welcomePage .socialIconBlock .feedBlock .socialLogo {
+  position: absolute;
+  height: 3.5rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+.mainContainer .welcomePage .socialIconBlock .feedBlock:hover {
+  background: white;
+}
+.mainContainer .storyPage {
+  position: relative;
+  float: left;
+  height: 30rem;
+  width: 100%;
+  text-align: center;
+}
+.mainContainer .storyPage .storyHeading {
+  position: relative;
+  padding-top: 6rem;
+  font-size: 3rem;
+  color: #3b4140;
+  font-weight: 500;
+}
+.mainContainer .storyPage .storyDescription {
+  position: relative;
+  padding-top: 2rem;
+  font-size: 2rem;
+  color: #3b4140;
+}
+.mainContainer .paralexPageOne {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 40rem;
+  background: url("../images/back2.jpg") 50% 0 fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mainContainer .aboutPage {
+  position: relative;
+  float: left;
+  height: about;
+  width: 100%;
+  padding: 8rem 0;
+  text-align: center;
+}
+.mainContainer .aboutPage .aboutHeading {
+  position: relative;
+  font-size: 3rem;
+  color: #3b4140;
+  font-weight: 500;
+}
+.mainContainer .aboutPage .aboutDescription {
+  position: relative;
+  padding: 1.6rem;
+  padding-top: 4rem;
+  max-height: 17rem;
+  overflow: hidden;
+  font-size: 1.6rem;
+  color: #3b4140;
+  display: block;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 40px;
+  text-align: justify;
+}
+.mainContainer .aboutPage .btnReadMore {
+  position: relative;
+  margin: 0 auto;
+  height: 4rem;
+  line-height: 4rem;
+  width: 14rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #dfa240;
+  font-size: 1.4rem;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 2rem;
+  border: 1px solid #dfa240;
+}
+.mainContainer .paralexPageTwo {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 40rem;
+  background: url("../images/back3.jpg") 50% 0 fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mainContainer .paralexPageThree {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 55rem;
+  background: url("../images/menu2_bg.jpg") 50% 0 fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mainContainer .paralexPageThree .paralexOverlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.mainContainer .paralexPageThree .paralexOverlay .paralexHeading {
+  position: relative;
+  float: left;
+  width: 100%;
+  color: #dfa240;
+  font-family: 'Pinyon Script', cursive;
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: 5px;
+  line-height: 1;
+  padding-top: 6rem;
+  text-align: center;
+}
+.mainContainer .paralexPageThree .paralexOverlay .paralexHeading .subHeading {
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 70rem;
+  visibility: hidden;
+  background-color: white;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  -webkit-transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 1100;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewContainer .reviewHeading {
+  position: fixed;
+  height: 9rem;
+  line-height: 9rem;
+  width: 100%;
+  font-weight: 700;
+  box-shadow: -1px 4px 21px -5px rgba(0, 0, 0, 0.17);
+  box-sizing: border-box;
+  font-size: 2.4rem;
+  text-align: center;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewContainer .reviewHeading .crossIcon {
+  position: absolute;
+  right: 1rem;
+  height: 2.5rem;
+  top: 1rem;
+  cursor: pointer;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewContainer .reviewContainerBlock::-webkit-scrollbar {
+  display: none;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewContainer .reviewContainerBlock {
+  position: absolute;
+  top: 10rem;
+  bottom: 0;
+  width: 100%;
+  overflow: scroll;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewContainer .reviewContainerBlock .reviewBlock {
+  position: relative;
+  float: left;
+  height: auto;
+  width: 100%;
+  background: white;
+  box-shadow: -1px 4px 21px -5px rgba(0, 0, 0, 0.17);
+  box-sizing: border-box;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewContainer .reviewContainerBlock .reviewBlock .leftPanel {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 30%;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewContainer .reviewContainerBlock .reviewBlock .leftPanel .memberBlock {
+  position: absolute;
+  top: 2rem;
+  height: auto;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewContainer .reviewContainerBlock .reviewBlock .leftPanel .memberBlock .reviewMemberImage {
+  position: relative;
+  float: left;
+  height: 5rem;
+  width: 5rem;
+  margin-left: 2.7rem;
+  border-radius: 50%;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewContainer .reviewContainerBlock .reviewBlock .leftPanel .memberBlock .reviewMemberName {
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
+  color: #dfa240;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewContainer .reviewContainerBlock .reviewBlock .rightPanel::-webkit-scrollbar {
+  display: none;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewContainer .reviewContainerBlock .reviewBlock .rightPanel {
+  position: relative;
+  float: right;
+  height: 100%;
+  width: 70%;
+  padding: 2rem;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewContainer.slideUp {
+  opacity: 1;
+  visibility: visible;
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer {
+  position: absolute;
+  height: 30rem;
+  width: 70rem;
+  bottom: 6rem;
+  left: 50%;
+  font-family: 'Raleway', sans-serif;
+  -webkit-transform: translate(-50%);
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .carousel {
+  height: 100% !important;
+  width: 100% !important;
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .carousel-inner {
+  height: 100%;
+  overflow: hidden;
+  -webkit-transform: all 1s;
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .carousel-inner > .item > a > img,
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .carousel-inner > .item > img {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .btnViewMore {
+  position: absolute;
+  right: 2rem;
+  bottom: 0;
+  height: 4rem;
+  line-height: 4rem;
+  width: 14rem;
+  text-transform: uppercase;
+  text-align: right;
+  color: #dfa240;
+  font-size: 1.4rem;
+  cursor: pointer;
+  font-weight: 600;
+  z-index: 120;
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .item {
+  height: 100% !important;
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .item .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  display: table;
+  text-align: center;
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .item .overlay .block {
+  position: relative;
+  color: white;
+  vertical-align: middle;
+  display: table-cell;
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .item .overlay .block .memberImage {
+  position: relative;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .item .overlay .block .memberReview {
+  font-size: 2rem;
+  height: 10rem;
+  font-weight: 300;
+  padding: 1.5rem;
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .item .overlay .block .memberName {
+  color: #dfa240;
+  font-weight: 600;
+  padding-top: 1rem;
+  font-size: 1.8rem;
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .white {
+  -webkit-transform: all 0.6s;
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .white:hover {
+  display: none;
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .carousel-indicators .active {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  background-color: #d5232e;
+}
+.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .carousel-indicators li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000\9;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.mainContainer .eventPage {
+  position: relative;
+  float: left;
+  height: auto;
+  width: 100%;
+}
+.mainContainer .eventPage .eventHeading {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-top: 6rem;
+  font-size: 3rem;
+  color: #3b4140;
+  font-weight: 500;
+}
+.mainContainer .eventPage .eventContainer {
+  position: relative;
+  float: left;
+  height: auto;
+  padding: 3rem 0 6rem;
+}
+.mainContainer .eventPage .eventContainer .eventUpperBlock {
+  position: relative;
+  height: 45rem;
+  padding: 0 2rem 0 0;
+  margin-top: 2rem;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+.mainContainer .eventPage .eventContainer .eventUpperBlock .eventInnerBlock {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: -1px 4px 21px -5px rgba(0, 0, 0, 0.17);
+  padding: 2rem;
+  overflow: hidden;
+}
+.mainContainer .eventPage .eventContainer .eventUpperBlock .eventInnerBlock .eventImage {
+  position: relative;
+  float: left;
+  height: 60%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.mainContainer .eventPage .eventContainer .eventUpperBlock .eventInnerBlock .eventDetails {
+  position: relative;
+  float: left;
+  height: 40%;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.mainContainer .eventPage .eventContainer .eventUpperBlock .eventInnerBlock .eventDetails .eventName {
+  position: relative;
+  font-size: 2rem;
+  color: black;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  font-weight: 600;
+}
+.mainContainer .eventPage .eventContainer .eventUpperBlock .eventInnerBlock .eventDetails .eventDate {
+  position: relative;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  color: #3b4140;
+  padding-top: 0.5rem;
+}
+.mainContainer .eventPage .eventContainer .eventUpperBlock .eventInnerBlock .eventDetails .eventLocation {
+  position: relative;
+  padding-top: 0.5rem;
+  font-size: 1.4rem;
+}
+.mainContainer .eventPage .eventContainer .eventUpperBlock .eventInnerBlock .eventDetails .eventTimeBlock {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.mainContainer .eventPage .eventContainer .eventUpperBlock .eventInnerBlock .btnBookEvent {
+  position: absolute;
+  height: 4rem;
+  line-height: 4rem;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  background: #dfa240;
+  right: 2rem;
+  bottom: 2rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -webkit-transform-style: preserve-3d;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer {
+  position: absolute;
+  height: 50rem;
+  width: 70rem;
+  background: white;
+  padding: 7rem;
+  box-shadow: -1px 4px 21px -5px rgba(0, 0, 0, 0.17);
+  box-sizing: border-box;
+  z-index: 1200;
+  -webkit-transition: all 0.3s ease;
+  top: 10rem;
+  left: 50%;
+  display: none;
+  transform: translate(-50%);
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .detailContainer .placeholder {
+  position: relative;
+  height: 5rem;
+  line-height: 5rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  font-size: 1.6rem;
+  border-bottom: 0.1rem solid #e4e4e4;
+  color: gray;
+  background: transparent;
+  font-weight: 100;
+  margin-top: 4rem;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .detailContainer .placeholder::-webkit-input-placeholder {
+  color: #C3C3C3;
+  font-size: 1.6rem;
+  font-weight: 100;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .btnConfirm {
+  position: absolute;
+  height: 4rem;
+  line-height: 4rem;
+  width: 10rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  background: #dfa240;
+  color: white;
+  text-align: center;
+  right: 7rem;
+  bottom: 7rem;
+  cursor: pointer;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .target {
+  position: relative;
+  float: left;
+  padding-top: 2rem;
+  color: red;
+  font-size: 1.5rem;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .thankYouContainer {
+  position: absolute;
+  height: 45rem;
+  top: 0;
+  width: 60rem;
+  background: white;
+  padding-top: 6rem;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  text-align: center;
+  font-size: 2.8rem;
+  color: gray;
+  font-weight: 100;
+  font-family: 'Raleway', sans-serif;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .thankYouContainer .thankYou {
+  position: relative;
+  float: left;
+  height: auto;
+  padding-top: 10rem;
+  width: 100%;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .thankYouContainer .name {
+  font-size: 2.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .thankYouContainer .subDescription {
+  font-size: 1.6rem;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .thankYouContainer.fadeIn {
+  opacity: 1;
+  visibility: visible;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer.slideConfirmationScreen {
+  display: block;
+}
+.mainContainer .reservationPage {
+  position: relative;
+  float: left;
+  height: 90rem;
+  width: 100%;
+}
+.mainContainer .reservationPage .reservationImageSection {
+  position: relative;
+  float: left;
+  height: 60rem;
+  width: 100%;
+  background-image: url("../images/reservation.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mainContainer .reservationPage .reservationImageSection .reservationOverlay {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.66);
+}
+.mainContainer .reservationPage .reservationImageSection .reservationOverlay .contentBlock {
+  position: relative;
+  padding-top: 10rem;
+  height: auto;
+}
+.mainContainer .reservationPage .reservationImageSection .reservationOverlay .contentBlock .greeting {
+  color: #dfa240;
+  font-family: 'Pinyon Script', cursive;
+  font-size: 5rem;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  margin: 15px 0 0;
+}
+.mainContainer .reservationPage .reservationImageSection .reservationOverlay .contentBlock .greetingDescription {
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 4.4rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  line-height: 6rem;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+.mainContainer .reservationPage .reservationImageSection .reservationOverlay .contentBlock .greetingDescription .lightText {
+  color: #dfa240;
+  font-weight: 200;
+}
+.mainContainer .reservationPage .reservationImageSection .reservationOverlay .contentBlock .quoteText {
+  font-family: 'Raleway', sans-serif;
+  padding-top: 2.5rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+.mainContainer .reservationPage .divider {
+  background: transparent url("../images/scallops.png") repeat-x scroll center center;
+  height: 5rem;
+  margin-top: -1rem;
+  position: relative;
+  float: left;
+  width: 100%;
+  z-index: 9;
+}
+.mainContainer .reservationPage .reservationUpperBlock {
+  position: absolute;
+  height: 70rem;
+  width: 45rem;
+  background: white;
+  z-index: 100;
+  right: 10rem;
+  top: 12rem;
+  border: 1px solid #e4e4e4;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+.mainContainer .reservationPage .reservationUpperBlock .greetingPage {
+  position: absolute;
+  left: 2rem;
+  right: 2rem;
+  top: 2rem;
+  bottom: 2rem;
+  visibility: hidden;
+  z-index: 100;
+  background: white;
+  border: 0.1rem solid #EBE0E0;
+}
+.mainContainer .reservationPage .reservationUpperBlock .greetingPage .greeting {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.mainContainer .reservationPage .reservationUpperBlock .greetingPage .crossIcon {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  width: 3rem;
+  cursor: pointer;
+}
+.mainContainer .reservationPage .reservationUpperBlock .reservationInnerBlock {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #e4e4e4;
+  padding: 5rem 4rem;
+}
+.mainContainer .reservationPage .reservationUpperBlock .reservationInnerBlock .calendarImageBlock {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 5rem;
+  text-align: center;
+}
+.mainContainer .reservationPage .reservationUpperBlock .reservationInnerBlock .calendarImageBlock .calendarLogo {
+  height: 4rem;
+}
+.mainContainer .reservationPage .reservationUpperBlock .reservationInnerBlock .bookHeading {
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
+  color: #272622;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.mainContainer .reservationPage .reservationUpperBlock .reservationInnerBlock .bookDescription {
+  position: relative;
+  float: left;
+  width: 100%;
+  color: #dfa240;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.mainContainer .reservationPage .reservationUpperBlock .reservationInnerBlock .diamondImageBlock {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+}
+.mainContainer .reservationPage .reservationUpperBlock .reservationInnerBlock .formGroup {
+  position: relative;
+  float: left;
+  padding-top: 3rem;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+.mainContainer .reservationPage .reservationUpperBlock .reservationInnerBlock .formGroup .formHeading {
+  color: #272622;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+.mainContainer .reservationPage .reservationUpperBlock .reservationInnerBlock .formGroup .formControl {
+  position: relative;
+  float: left;
+  height: 34px;
+  width: 100%;
+  padding-left: 1rem;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.mainContainer .reservationPage .reservationUpperBlock .reservationInnerBlock .formGroup .formControl::-webkit-input-placeholder {
+  color: #c2c2c2;
+  font-family: 'Raleway', sans-serif;
+}
+.mainContainer .reservationPage .reservationUpperBlock .reservationInnerBlock .btnBooking {
+  position: absolute;
+  bottom: 2rem;
+  height: 4rem;
+  line-height: 4rem;
+  width: 80%;
+  text-align: center;
+  background: #dfa240;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.mainContainer .reservationPage .locationSection {
+  position: relative;
+  float: left;
+  height: 30rem;
+  width: 100%;
+}
+.mainContainer .reservationPage .locationSection .locationContentBlock {
+  position: relative;
+  float: left;
+  height: auto;
+}
+.mainContainer .reservationPage .locationSection .locationContentBlock .locationHeading {
+  color: #272622;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 26px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.mainContainer .reservationPage .locationSection .locationContentBlock .locationText {
+  color: #b1b1b1;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  line-height: 2.8rem;
+}
+.mainContainer .reservationPage .locationSection .btnSendDirection {
+  position: relative;
+  height: 4rem;
+  line-height: 4rem;
+  width: 20rem;
+  color: white;
+  text-align: center;
+  background: #dfa240;
+}
+.mainContainer .galleryPage {
+  position: relative;
+  float: left;
+  height: auto;
+  width: 100%;
+}
+.mainContainer .galleryPage .galleryHeading {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-top: 6rem;
+  font-size: 3rem;
+  color: #3b4140;
+  font-weight: 500;
+}
+.mainContainer .galleryPage .galleryContainer {
+  position: relative;
+  float: left;
+  height: auto;
+  padding-bottom: 6rem;
+}
+.mainContainer .galleryPage .galleryContainer .imageContainer {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 3rem 0;
+}
+.mainContainer .galleryPage .galleryContainer .imageContainer .overlay {
+  position: relative;
+  float: left;
+  padding-left: 0;
+  height: 30rem;
+  margin-top: 1.5rem;
+}
+.mainContainer .galleryPage .galleryContainer .imageContainer .overlay .block {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: -1px 4px 21px -5px rgba(0, 0, 0, 0.17);
+}
+.mainContainer .galleryPage .galleryContainer .imageContainer .overlay .lastblock {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #dfa240;
+  cursor: pointer;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.mainContainer .galleryPage .galleryContainer .imageContainer .overlay .lastblock .cameraBlock {
+  position: absolute;
+  height: 15rem;
+  width: 25rem;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainContainer .galleryPage .galleryContainer .imageContainer .overlay .lastblock .cameraBlock .cameraIcon {
+  position: relative;
+  height: 10rem;
+}
+.mainContainer .galleryPage .galleryContainer .imageContainer .overlay .lastblock .cameraBlock .cameraText {
+  color: #dfa240;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.mainContainer .dividerMap {
+  background: transparent url("../images/scallops-r.png") repeat-x scroll center center;
+  height: 5rem;
+  position: relative;
+  float: left;
+  width: 100%;
+  z-index: 9;
+}
+.mainContainer .mapPage {
+  position: relative;
+  float: left;
+  margin-top: -1rem;
+  height: 45rem;
+  width: 100%;
+  background: black;
+}
+.mainContainer .footerEnd {
+  height: auto;
+  line-height: 8rem;
+  width: 100%;
+  position: relative;
+  float: left;
+  background-color: #000;
+}
+.mainContainer .footerEnd .leftContent {
+  text-align: left;
+  color: #B3AEAE;
+  font-size: 1.6rem;
+  padding-left: 0;
+}
+.mainContainer .footerEnd .rightContent {
+  text-align: right;
+  color: #B3AEAE;
+  font-size: 1.6rem;
+  padding-right: 0;
+}
+@media screen and (max-width: 420px) {
+  .mainContainer .footerEnd .leftContent {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .mainContainer .footerEnd .rightContent {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
