@@ -256,7 +256,7 @@ input[type=number]::-webkit-outter-spin-button {
   font-weight: 600;
   margin-top: 2rem;
   cursor: pointer;
-  z-index: 200;
+  z-index: 50;
   border: 1px solid #dfa240;
 }
 .mainContainer .paralexPageTwo {
@@ -558,7 +558,7 @@ input[type=number]::-webkit-outter-spin-button {
   position: absolute;
   height: 40rem;
   width: 70rem;
-  bottom: 0rem;
+  bottom: 0;
   left: 50%;
   font-family: 'Raleway', sans-serif;
   -webkit-transform: translate(-50%);
@@ -747,10 +747,9 @@ input[type=number]::-webkit-outter-spin-button {
 }
 .mainContainer .eventPage .eventContainer .confirmationContainer {
   position: absolute;
-  height: 50rem;
-  width: 70rem;
-  background: white;
-  padding: 7rem;
+  height: 55rem;
+  width: 65rem;
+  background: #f7f5f6;
   box-shadow: -1px 4px 21px -5px rgba(0, 0, 0, 0.17);
   box-sizing: border-box;
   z-index: 1200;
@@ -760,10 +759,55 @@ input[type=number]::-webkit-outter-spin-button {
   display: none;
   transform: translate(-50%);
 }
-.mainContainer .eventPage .eventContainer .confirmationContainer .detailContainer .placeholder {
+.mainContainer .eventPage .eventContainer .confirmationContainer .backEventImage {
   position: relative;
-  height: 5rem;
-  line-height: 5rem;
+  float: left;
+  height: 20rem;
+  width: 100%;
+  background-image: url("../images/4.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .backEventImage .eventShortDesctiption {
+  position: absolute;
+  bottom: 0;
+  height: 7rem;
+  line-height: 7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 100;
+  box-sizing: border-box;
+  color: white;
+  background: linear-gradient(to right, rgba(252, 247, 252, 0.84) 0, rgba(3, 3, 3, 0.84) 0, rgba(3, 3, 3, 0.9) 100%);
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .backEventImage .eventShortDesctiption .eventName {
+  position: relative;
+  float: left;
+  width: 70%;
+  height: 100%;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .backEventImage .eventShortDesctiption .eventDate {
+  position: relative;
+  float: left;
+  width: 30%;
+  height: 100%;
+  text-align: right;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .eventDetailConatiner .detailContainer {
+  position: relative;
+  float: left;
+  height: auto;
+  padding-left: 2rem;
+  box-sizing: border-box;
+  width: 63rem;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .eventDetailConatiner .detailContainer .placeholder {
+  position: relative;
+  height: 3rem;
+  line-height: 3rem;
   width: 100%;
   box-sizing: border-box;
   border: none;
@@ -774,10 +818,54 @@ input[type=number]::-webkit-outter-spin-button {
   font-weight: 100;
   margin-top: 4rem;
 }
-.mainContainer .eventPage .eventContainer .confirmationContainer .detailContainer .placeholder::-webkit-input-placeholder {
+.mainContainer .eventPage .eventContainer .confirmationContainer .eventDetailConatiner .detailContainer .placeholder::-webkit-input-placeholder {
   color: #C3C3C3;
   font-size: 1.6rem;
   font-weight: 100;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .eventDetailConatiner .selectPersonContainer {
+  position: relative;
+  float: left;
+  width: 63rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  box-sizing: border-box;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .eventDetailConatiner .selectPersonContainer .text {
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 1.6rem;
+  color: #645c5c;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .eventDetailConatiner .selectPersonContainer .personBarContainer {
+  position: relative;
+  float: left;
+  height: 8rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .eventDetailConatiner .selectPersonContainer .personBarContainer .numberBlock {
+  position: relative;
+  float: left;
+  height: 5rem;
+  line-height: 5rem;
+  background: #E6E6E6;
+  width: 25%;
+  font-size: 2rem;
+  text-align: center;
+  color: #645c5c;
+  box-shadow: 0.2rem 0.2rem 0.15rem 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+}
+.mainContainer .eventPage .eventContainer .confirmationContainer .eventDetailConatiner .selectPersonContainer .personBarContainer .numberBlock.selectedNumber {
+  background: #dfa240;
+  color: white;
+  height: 5rem;
+  line-height: 5rem;
+  box-shadow: 0.1rem 0.15rem 1rem 0 rgba(0, 0, 0, 0.3);
 }
 .mainContainer .eventPage .eventContainer .confirmationContainer .btnConfirm {
   position: absolute;
@@ -789,24 +877,25 @@ input[type=number]::-webkit-outter-spin-button {
   background: #dfa240;
   color: white;
   text-align: center;
-  right: 7rem;
-  bottom: 7rem;
+  right: 2rem;
+  bottom: 2rem;
   cursor: pointer;
 }
 .mainContainer .eventPage .eventContainer .confirmationContainer .target {
   position: relative;
   float: left;
   padding-top: 2rem;
+  padding-left: 2rem;
   color: red;
   font-size: 1.5rem;
 }
 .mainContainer .eventPage .eventContainer .confirmationContainer .thankYouContainer {
   position: absolute;
-  height: 45rem;
+  height: 55rem;
   top: 0;
-  width: 60rem;
+  width: 65rem;
   background: white;
-  padding-top: 6rem;
+  padding-top: 13rem;
   box-sizing: border-box;
   opacity: 0;
   visibility: hidden;

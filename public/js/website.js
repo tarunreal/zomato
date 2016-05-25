@@ -331,6 +331,12 @@ function showConfirmationContainer() {
     $('.carousalOverlay').css('display', 'block');
     $('.mainContainer').css('overflow-y', 'hidden');
     $(".eventContainer").get(0).scrollIntoView();
+    
+    bind('.numberBlock', function showSelectedNumber() {
+      $('.numberBlock').removeClass('selectedNumber');
+      $(this).addClass('selectedNumber');
+    });
+
     bind('.btnConfirm', showThankYouContainer)
     bind('.carousalOverlay', function(){
       $('.confirmationContainer').removeClass('slideConfirmationScreen');
