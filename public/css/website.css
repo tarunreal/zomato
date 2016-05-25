@@ -233,8 +233,7 @@ input[type=number]::-webkit-outter-spin-button {
 }
 .mainContainer .aboutPage .aboutDescription {
   position: relative;
-  padding: 1.6rem;
-  padding-top: 4rem;
+  padding: 4rem 1.6rem 1.6rem;
   max-height: 17rem;
   overflow: hidden;
   font-size: 1.6rem;
@@ -254,9 +253,10 @@ input[type=number]::-webkit-outter-spin-button {
   text-align: center;
   color: #dfa240;
   font-size: 1.4rem;
-  cursor: pointer;
   font-weight: 600;
   margin-top: 2rem;
+  cursor: pointer;
+  z-index: 200;
   border: 1px solid #dfa240;
 }
 .mainContainer .paralexPageTwo {
@@ -272,7 +272,7 @@ input[type=number]::-webkit-outter-spin-button {
   position: relative;
   float: left;
   width: 100%;
-  height: 55rem;
+  height: 70rem;
   background: url("../images/menu2_bg.jpg") 50% 0 fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -282,6 +282,23 @@ input[type=number]::-webkit-outter-spin-button {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
+}
+.mainContainer .paralexPageThree .paralexOverlay .btnViewMore {
+  position: absolute;
+  bottom: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  width: 14rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #dfa240;
+  font-size: 1.4rem;
+  cursor: pointer;
+  font-weight: 600;
+  left: 50%;
+  z-index: 500;
+  transform: translateX(-50%);
+  border: 1px solid #dfa240;
 }
 .mainContainer .paralexPageThree .paralexOverlay .paralexHeading {
   position: relative;
@@ -309,7 +326,7 @@ input[type=number]::-webkit-outter-spin-button {
   position: fixed;
   top: 50%;
   left: 50%;
-  height: 100%;
+  height: 60rem;
   width: 70rem;
   visibility: hidden;
   background-color: white;
@@ -403,26 +420,160 @@ input[type=number]::-webkit-outter-spin-button {
   opacity: 1;
   visibility: visible;
 }
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer {
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer {
+  position: relative;
+  float: left;
+  height: 44rem;
+  width: 100%;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock {
   position: absolute;
-  height: 30rem;
+  height: 40rem;
+  top: 2rem;
+  width: 90rem;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  padding: 0 3rem;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock .typeTwo {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock .typeTwo .typeTwoReviewBlock {
+  position: relative;
+  float: left;
+  padding: 2rem;
+  height: 18rem;
+  width: 47%;
+  background: #E3F2FD;
+  border-radius: 10px;
+  text-align: left;
+  margin-left: 1.8rem;
+  margin-top: 1.8rem;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock .typeTwo .typeTwoReviewBlock .upperBlock {
+  position: relative;
+  float: left;
+  height: 57%;
+  width: 100%;
+  font-size: 1.4rem;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock .typeTwo .typeTwoReviewBlock .lowerBlock {
+  position: relative;
+  float: left;
+  margin-top: 1rem;
+  height: 35%;
+  width: 100%;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock .typeTwo .typeTwoReviewBlock .lowerBlock .typeTwoMemberImage {
+  position: relative;
+  float: left;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock .typeTwo .typeTwoReviewBlock .lowerBlock .typeTwoMemberName {
+  position: relative;
+  float: left;
+  padding-left: 1.5rem;
+  font-weight: 500;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock .typeThree {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock .typeThree .typeThreeReviewBlock {
+  position: relative;
+  float: left;
+  padding: 2rem;
+  height: 18rem;
+  width: 47%;
+  background: #E3F2FD;
+  border-radius: 10px;
+  text-align: left;
+  margin-left: 1.8rem;
+  margin-top: 1.8rem;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock .typeThree .typeThreeReviewBlock .leftBlock {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 20%;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock .typeThree .typeThreeReviewBlock .leftBlock .typeThreeMemberImage {
+  position: relative;
+  float: left;
+  height: 5rem;
+  width: 5rem;
+  margin-top: 3rem;
+  border-radius: 50%;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock .typeThree .typeThreeReviewBlock .rightBlock {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 80%;
+  font-size: 1.4rem;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock .typeThree .typeThreeReviewBlock .rightBlock .quotesIcon {
+  position: relative;
+  float: left;
+  width: auto;
+  height: 2.5rem;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock .typeThree .typeThreeReviewBlock .rightBlock .typeThreeMemberReview {
+  position: absolute;
+  top: 0;
+  height: 9rem;
+  padding-left: 3.5rem;
+  font-size: 1.6rem;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .reviewDisplayBlock .typeThree .typeThreeReviewBlock .rightBlock .typeThreeMemberName {
+  position: absolute;
+  top: 9rem;
+  bottom: 0;
+  padding-top: 1.5rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer {
+  position: absolute;
+  height: 40rem;
   width: 70rem;
-  bottom: 6rem;
+  bottom: 0rem;
   left: 50%;
   font-family: 'Raleway', sans-serif;
   -webkit-transform: translate(-50%);
 }
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .carousel {
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer .carousel {
   height: 100% !important;
   width: 100% !important;
 }
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .carousel-inner {
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer .carousel-inner {
   height: 100%;
   overflow: hidden;
   -webkit-transform: all 1s;
 }
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .carousel-inner > .item > a > img,
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .carousel-inner > .item > img {
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer .carousel-inner > .item > a > img,
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer .carousel-inner > .item > img {
   width: 100%;
   margin: auto;
   height: 100%;
@@ -430,25 +581,10 @@ input[type=number]::-webkit-outter-spin-button {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .btnViewMore {
-  position: absolute;
-  right: 2rem;
-  bottom: 0;
-  height: 4rem;
-  line-height: 4rem;
-  width: 14rem;
-  text-transform: uppercase;
-  text-align: right;
-  color: #dfa240;
-  font-size: 1.4rem;
-  cursor: pointer;
-  font-weight: 600;
-  z-index: 120;
-}
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .item {
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer .item {
   height: 100% !important;
 }
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .item .overlay {
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer .item .overlay {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -457,49 +593,50 @@ input[type=number]::-webkit-outter-spin-button {
   display: table;
   text-align: center;
 }
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .item .overlay .block {
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer .item .overlay .block {
   position: relative;
   color: white;
   vertical-align: middle;
   display: table-cell;
 }
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .item .overlay .block .memberImage {
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer .item .overlay .block .memberImage {
   position: relative;
   height: 8rem;
   width: 8rem;
   border-radius: 50%;
 }
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .item .overlay .block .memberReview {
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer .item .overlay .block .memberReview {
   font-size: 2rem;
-  height: 10rem;
+  height: 18rem;
   font-weight: 300;
   padding: 1.5rem;
   overflow: hidden;
   display: block;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  text-align: justify;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
 }
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .item .overlay .block .memberName {
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer .item .overlay .block .memberName {
   color: #dfa240;
   font-weight: 600;
   padding-top: 1rem;
   font-size: 1.8rem;
 }
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .white {
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer .white {
   -webkit-transform: all 0.6s;
 }
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .white:hover {
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer .white:hover {
   display: none;
 }
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .carousel-indicators .active {
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer .carousel-indicators .active {
   width: 16px;
   height: 16px;
   margin: 0;
   background-color: #d5232e;
 }
-.mainContainer .paralexPageThree .paralexOverlay .carousalContainer .carousel-indicators li {
+.mainContainer .paralexPageThree .paralexOverlay .reviewDisplayTypeContainer .carousalContainer .carousel-indicators li {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -603,6 +740,7 @@ input[type=number]::-webkit-outter-spin-button {
   background: #dfa240;
   right: 2rem;
   bottom: 2rem;
+  font-size: 1.4rem;
   cursor: pointer;
   -webkit-transition: 0.3s;
   -webkit-transform-style: preserve-3d;

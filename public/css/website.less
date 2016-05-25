@@ -233,8 +233,7 @@ input[type=number]::-webkit-outter-spin-button {
     }
     .aboutDescription {
       position: relative;
-      padding: 1.6rem;
-      padding-top: 4rem;
+      padding: 4rem 1.6rem 1.6rem;
       max-height: 17rem;
       overflow: hidden;
       font-size: 1.6rem;
@@ -246,7 +245,6 @@ input[type=number]::-webkit-outter-spin-button {
     }
     .btnReadMore {
       position: relative;
-      margin-top: 2rem;
       margin: 0 auto;
       cursor: pointer;
       height: 4rem;
@@ -259,6 +257,8 @@ input[type=number]::-webkit-outter-spin-button {
       cursor: pointer;
       font-weight: 600;
       margin-top: 2rem;
+      cursor: pointer;
+      z-index: 200;
       border: 1px solid #dfa240;
     }
   }
@@ -275,7 +275,7 @@ input[type=number]::-webkit-outter-spin-button {
     position: relative;
     float: left;
     width: 100%;
-    height: 55rem;
+    height: 70rem;
     background: url("../images/menu2_bg.jpg") 50% 0 fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -284,6 +284,23 @@ input[type=number]::-webkit-outter-spin-button {
       height: 100%;
       width: 100%;
       background: rgba(0,0,0,0.5);
+      .btnViewMore {
+        position: absolute;
+        bottom: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+        width: 14rem;
+        text-transform: uppercase;
+        text-align: center;
+        color: #dfa240;
+        font-size: 1.4rem;
+        cursor: pointer;
+        font-weight: 600;
+        left: 50%;
+        z-index: 500;
+        transform: translateX(-50%);
+        border: 1px solid #dfa240;
+      }
       .paralexHeading {
         position: relative;
         float: left;
@@ -310,7 +327,7 @@ input[type=number]::-webkit-outter-spin-button {
         position: fixed;
         top: 50%;
         left: 50%;
-        height: 100%;
+        height: 60rem;
         width: 70rem;
         visibility: hidden;
         background-color: white;
@@ -404,112 +421,234 @@ input[type=number]::-webkit-outter-spin-button {
           visibility: visible;
         }
       }
-      .carousalContainer {
-        position: absolute;
-        height: 30rem;
-        width: 70rem;
-        bottom: 6rem;
-        left: 50%;
-        font-family: 'Raleway', sans-serif;
-        -webkit-transform: translate(-50%);
-        .carousel {
-          height: 100% !important;
-          width: 100% !important;
-        }
-        .carousel-inner {
-          height: 100%;
-          overflow: hidden;
-          -webkit-transform: all 1s;
-        }
-        .carousel-inner > .item > a > img,
-        .carousel-inner > .item > img {
-          width: 100%;
-          margin: auto;
-          height: 100%;
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-        .btnViewMore {
+      .reviewDisplayTypeContainer {
+        position: relative;
+        float: left;
+        height: 44rem;
+        width: 100%;
+        .reviewDisplayBlock {
           position: absolute;
-          right: 2rem;
-          bottom: 0;
-          height: 4rem;
-          line-height: 4rem;
-          width: 14rem;
-          text-transform: uppercase;
-          text-align: right;
-          color: #dfa240;
-          font-size: 1.4rem;
-          cursor: pointer;
-          font-weight: 600;
-          z-index: 120;
-        }
-        .item {
-          height: 100% !important;
-          .overlay {
-            position: absolute;
+          height: 40rem;
+          top: 2rem;
+          width: 90rem;
+          left: 50%;
+          -webkit-transform: translate(-50%);
+          padding: 0 3rem;
+          .typeTwo {
+            position: relative;
             height: 100%;
             width: 100%;
-            z-index: 1000;
-            top: 0;
-            display: table;
-            text-align: center;
-            .block {
+            display: none;
+            .typeTwoReviewBlock {
               position: relative;
-              color: white;
-              vertical-align: middle;
-              display: table-cell;
-              .memberImage {
+              float: left;
+              padding: 2rem;
+              height: 18rem;
+              width: 47%;
+              background: #E3F2FD;
+              border-radius: 10px;
+              text-align: left;
+              margin-left: 1.8rem;
+              margin-top: 1.8rem;
+              .upperBlock {
                 position: relative;
-                height: 8rem;
-                width: 8rem;
-                border-radius: 50%;
-              }
-              .memberReview {
-                font-size: 2rem;
-                height: 10rem;
-                font-weight: 300;
-                padding: 1.5rem;
-                overflow: hidden;
+                float: left;
+                height: 57%;
+                width: 100%;
+                font-size: 1.4rem;
                 display: block;
                 display: -webkit-box;
-                -webkit-line-clamp: 3;
+                -webkit-line-clamp: 4;
                 -webkit-box-orient: vertical;
                 text-overflow: ellipsis;
+                overflow: hidden;
               }
-              .memberName {
-                color: #dfa240;
-                font-weight: 600;
-                padding-top: 1rem;
-                font-size: 1.8rem;
+              .lowerBlock {
+                position: relative;
+                float: left;
+                margin-top: 1rem;
+                height: 35%;
+                width: 100%;
+                .typeTwoMemberImage {
+                  position: relative;
+                  float: left;
+                  height: 4rem;
+                  width: 4rem;
+                  border-radius: 50%;
+                }
+                .typeTwoMemberName {
+                  position: relative;
+                  float: left;
+                  padding-left: 1.5rem;
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+
+          .typeThree {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: none;
+            .typeThreeReviewBlock {
+              position: relative;
+              float: left;
+              padding: 2rem;
+              height: 18rem;
+              width: 47%;
+              background: #E3F2FD;
+              border-radius: 10px;
+              text-align: left;
+              margin-left: 1.8rem;
+              margin-top: 1.8rem;
+              .leftBlock {
+                position: relative;
+                float: left;
+                height: 100%;
+                width: 20%;
+                .typeThreeMemberImage {
+                  position: relative;
+                  float: left;
+                  height: 5rem;
+                  width: 5rem;
+                  margin-top: 3rem;
+                  border-radius: 50%;
+                }
+              }
+              .rightBlock {
+                position: relative;
+                float: left;
+                height: 100%;
+                width: 80%;
+                font-size: 1.4rem;
+                .quotesIcon{
+                  position: relative;
+                  float: left;
+                  width: auto;
+                  height: 2.5rem;
+                }
+                .typeThreeMemberReview {
+                  position: absolute;;
+                  top: 0;
+                  height: 9rem;
+                  padding-left: 3.5rem;
+                  font-size: 1.6rem;
+                  display: block;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 4;
+                  -webkit-box-orient: vertical;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+                .typeThreeMemberName{
+                  position: absolute;
+                  top: 9rem;
+                  bottom: 0;
+                  padding-top: 1.5rem;
+                  width: 100%;
+                  text-align: center;
+                  font-size: 1.6rem;
+                  font-weight: 500;
+                }
               }
             }
           }
         }
-        .white {
-          -webkit-transform: all 0.6s;
-        }
-        .white:hover {
-          display: none;
-        }
-        .carousel-indicators .active {
-          width: 16px;
-          height: 16px;
-          margin: 0;
-          background-color: #d5232e;
-        }
-        .carousel-indicators li {
-          display: inline-block;
-          width: 15px;
-          height: 15px;
-          text-indent: -999px;
-          cursor: pointer;
-          background-color: #000\9;
-          background-color: rgba(0,0,0,0);
-          border: 1px solid #fff;
-          border-radius: 10px;
-          box-sizing: border-box;
+        .carousalContainer {
+          position: absolute;
+          height: 40rem;
+          width: 70rem;
+          bottom: 0rem;
+          left: 50%;
+          // display: none;
+          font-family: 'Raleway', sans-serif;
+          -webkit-transform: translate(-50%);
+          .carousel {
+            height: 100% !important;
+            width: 100% !important;
+          }
+          .carousel-inner {
+            height: 100%;
+            overflow: hidden;
+            -webkit-transform: all 1s;
+          }
+          .carousel-inner > .item > a > img,
+          .carousel-inner > .item > img {
+            width: 100%;
+            margin: auto;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+          .item {
+            height: 100% !important;
+            .overlay {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              z-index: 1000;
+              top: 0;
+              display: table;
+              text-align: center;
+              .block {
+                position: relative;
+                color: white;
+                vertical-align: middle;
+                display: table-cell;
+                .memberImage {
+                  position: relative;
+                  height: 8rem;
+                  width: 8rem;
+                  border-radius: 50%;
+                }
+                .memberReview {
+                  font-size: 2rem;
+                  height: 18rem;
+                  font-weight: 300;
+                  padding: 1.5rem;
+                  overflow: hidden;
+                  display: block;
+                  display: -webkit-box;
+                  text-align: justify;
+                  -webkit-line-clamp: 6;
+                  -webkit-box-orient: vertical;
+                  text-overflow: ellipsis;
+                }
+                .memberName {
+                  color: #dfa240;
+                  font-weight: 600;
+                  padding-top: 1rem;
+                  font-size: 1.8rem;
+                }
+              }
+            }
+          }
+          .white {
+            -webkit-transform: all 0.6s;
+          }
+          .white:hover {
+            display: none;
+          }
+          .carousel-indicators .active {
+            width: 16px;
+            height: 16px;
+            margin: 0;
+            background-color: #d5232e;
+          }
+          .carousel-indicators li {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            text-indent: -999px;
+            cursor: pointer;
+            background-color: #000\9;
+            background-color: rgba(0,0,0,0);
+            border: 1px solid #fff;
+            border-radius: 10px;
+            box-sizing: border-box;
+          }
         }
       }
     }
@@ -603,6 +742,7 @@ input[type=number]::-webkit-outter-spin-button {
             background: #dfa240;
             right: 2rem;
             bottom: 2rem;
+            font-size: 1.4rem;
             cursor: pointer;
             -webkit-transition: 0.3s;
             -webkit-transform-style: preserve-3d;
@@ -982,7 +1122,7 @@ input[type=number]::-webkit-outter-spin-button {
             background-position: center;
             box-shadow: @boxShadow;
           }
-          .lastblock{
+          .lastblock {
             position: relative;
             height: 100%;
             width: 100%;
@@ -990,7 +1130,7 @@ input[type=number]::-webkit-outter-spin-button {
             cursor: pointer;
             border-radius: 4px;
             box-sizing: border-box;
-            .cameraBlock{
+            .cameraBlock {
               position: absolute;
               height: 15rem;
               width: 25rem;
@@ -998,15 +1138,14 @@ input[type=number]::-webkit-outter-spin-button {
               left: 50%;
               top: 50%;
               transform: translate(-50%,-50%);
-              .cameraIcon{
+              .cameraIcon {
                 position: relative;
                 height: 10rem;
               }
-              .cameraText{
+              .cameraText {
                 color: #dfa240;
                 font-size: 2rem;
                 font-weight: 500;
-
               }
             }
           }

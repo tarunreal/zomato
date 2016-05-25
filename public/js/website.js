@@ -37,11 +37,11 @@ $(document).ready(function() {
 
         $('.aboutDescription').css('overflow', 'visible')
     })
-    bind('.btnBooking', function() {
+    bind('.carousalOverlay', function() {
         $(".greetingPage").css("visibility", "visible")
         $(".greetingPage").hide()
         $(".greetingPage").fadeIn(500)
-        bind(".crossIcon", function() {
+        bind(".carousalOverlay", function() {
             $(".greetingPage").fadeOut(500)
             setTimeout(function() {
                 $(".greetingPage").css("visibility", "hidden")
@@ -277,11 +277,11 @@ function renderReviews(data) {
             $('.reviewContainerBlock').scrollTop()
             render('.reviewContainerBlock', 'allReviews', data.user_reviews)
             $('.reviewContainer').addClass('slideUp');
-            bind('.crossIcon', function() {
+            bind('.carousalOverlay', function() {
                 $('.mainContainer').css('overflow-y', 'visible');
+                $('.carousalOverlay').css('display', 'none');
                 $(".carousalContainer").get(0).scrollIntoView();
                 $('.reviewContainer').removeClass('slideUp');
-                $('.carousalOverlay').css('display', 'none');
             })
         });
     }
@@ -332,6 +332,11 @@ function showConfirmationContainer() {
     $('.mainContainer').css('overflow-y', 'hidden');
     $(".eventContainer").get(0).scrollIntoView();
     bind('.btnConfirm', showThankYouContainer)
+    bind('.carousalOverlay', function(){
+      $('.confirmationContainer').removeClass('slideConfirmationScreen');
+      $('.mainContainer').css('overflow-y', 'visible');
+      $('.carousalOverlay').css('display', 'none');
+    })
 }
 
 function showThankYouContainer() {
