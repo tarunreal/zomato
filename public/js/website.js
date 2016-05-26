@@ -2,15 +2,22 @@ var eventToUse = 'tap';
 $(document).ready(function() {
     makeTemplates();
 
+
     $('.widgetNew').mouseenter(function(){
         $(this).css('width','13rem');
         $(this).find('.text').removeClass('hide');
 
-    })
+    });
+
     $('.widgetNew').mouseleave(function(){
         $(this).css('width','4rem');
         $(this).find('.text').addClass('hide');
-    })
+    });
+
+    bind('.personBlock', function showSelectedNumber() {
+      $('.personBlock').removeClass('selectedPerson');
+      $(this).addClass('selectedPerson');
+    });
 
     bind('.btnClaim', function(){
       $('.signUpContainer').css('display','block');

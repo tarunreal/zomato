@@ -298,20 +298,39 @@
             <img src="../images/diamond.png" class="diamondLogo">
           </div>
           <div class="formGroup">
-            <div class="formHeading">Guest:</div>
-            <input class="formControl" type="number" placeholder="How Many Guests">
-          </div>
-          <div class="formGroup">
             <div class="formHeading">Email:</div>
             <input class="formControl" type="email" placeholder="Your Email Address">
           </div>
-          <div class="formGroup">
-            <div class="formHeading">Date and Time:</div>
-            <input class="formControl" type="text" placeholder="When do you want to Book">
+          <div class="formGroup formDateGroup">
+            <div class="formHeading formDateHeading">Date:</div>
+            <input placeholder="Date" class="textbox-n" type="text" onfocus="(this.type='date')"  id="selectDate">
+          </div>
+          <div class="formGroup formDateGroup" style="margin-left: 6%;">
+            <div class="formHeading formDateHeading">Time:</div>
+            <input placeholder="Time" class="textbox-n" type="text" onfocus="(this.type='time')"  id="selectDate">
           </div>
           <div class="formGroup">
-            <div class="formHeading">Your Suggestions:</div>
+            <div class="formHeading">Your Preferences:</div>
             <input class="formControl" type="text" placeholder="How can we help you?">
+          </div>
+          <div class="formGroup">
+            <div class="formHeading">Guest:</div>
+            <div class="guestBlock">
+              <div class="personBarContainer">
+                <div class="personBlock">
+                  1
+                </div>
+                <div class="personBlock selectedPerson">
+                  2
+                </div>
+                <div class="personBlock">
+                  3
+                </div>
+                <div class="personBlock">
+                  4+
+                </div>
+              </div>
+            </div>
           </div>
           <div class="btnBooking">
             MAKE YOUR BOOKING
